@@ -14,5 +14,9 @@ inputFile.addEventListener('change', function() {
 
 btn.addEventListener('click', () => {
     const imageUrl = localStorage.getItem('image');
-    img.setAttribute('src', imageUrl);
-})
+    if (imageUrl) {
+        img.setAttribute('src', imageUrl);
+    }else{
+        alert('image not found. you try again.')
+    }
+});
