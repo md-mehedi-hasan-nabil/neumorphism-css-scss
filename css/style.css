@@ -1,0 +1,106 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: #55efc4;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+body article {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  background: linear-gradient(145deg, #cacaca6e, #f0f0f0);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffffb2;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+}
+body article::after {
+  content: " ";
+  position: absolute;
+  transition: transform 0.5s;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  background: linear-gradient(145deg, #cacaca6e, #f0f0f0);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffffb2;
+  top: 50px;
+  left: 50px;
+  transition: all 0.5s;
+  z-index: -1;
+  background: linear-gradient(145deg, #cacaca6e, #f0f0f0);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffffb2;
+  border-radius: 45px;
+}
+body article::before {
+  content: " ";
+  position: absolute;
+  transition: transform 0.5s;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  background: linear-gradient(145deg, #cacaca6e, #f0f0f0);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffffb2;
+  top: -50px;
+  left: -50px;
+  transition: all 0.5s;
+  z-index: -1;
+  background: linear-gradient(145deg, #cacaca6e, #f0f0f0);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffffb2;
+  border-radius: 45px;
+}
+body article:hover::after {
+  transition: all 0.5s;
+  transform: scale(0.5);
+  top: 250px;
+  left: 250px;
+  transition: all 0.5s;
+  border-radius: 50%;
+}
+body article:hover::before {
+  transition: transform 0.5s;
+  transform: scale(0.6);
+  top: -250px;
+  left: -250px;
+  transition: all 0.5s;
+  border-radius: 50%;
+}
+body article h3 {
+  color: #6c5ce7;
+}
+body article img {
+  width: 80%;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+body article marquee {
+  color: green;
+  font-size: 15px;
+  margin-top: 30px;
+}
+body .img-form {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+body .img-form {
+  background: linear-gradient(145deg, #cacaca6e, #f0f0f0);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffffb2;
+  border-radius: 30px;
+}
+body .img-form #input-file {
+  width: 106px;
+}/*# sourceMappingURL=style.css.map */

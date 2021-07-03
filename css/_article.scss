@@ -1,0 +1,58 @@
+@import "variable";
+
+@mixin bg-shadow {
+    background: linear-gradient(145deg, #cacaca6e, #f0f0f0);
+    box-shadow: 20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffffb2;
+}
+
+@mixin article-style {
+    width: $article-width;
+    height: $article-height;
+    padding: 20px;
+    @include bg-shadow;
+}
+
+@mixin article-selector-position($top-position, $left-position) {
+    top: $top-position;
+    left: $left-position;
+    transition: all 0.5s;
+}
+
+@mixin important-text {
+    text: {
+        align: center;
+    }
+}
+
+@mixin important-font {
+    font: {
+        weight: bold;
+        size: $font-size;
+    }
+}
+
+@mixin animation-mixin($name, $from, $to) {
+    @keyframes #{$name} {
+        0% {
+            transform: translate3d($from, 0, 0);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translate3d($to, 0, 0);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin article-after-before($top, $left, $zIndex) {
+    content: ' ';
+    position: absolute;
+    transition: transform 0.5s;
+    @include article-style;
+    @include article-selector-position($top, $left);
+    z-index: $zIndex;
+    @include bg-shadow;
+    border-radius: 45px;
+}

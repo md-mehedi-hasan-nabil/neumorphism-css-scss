@@ -1,0 +1,86 @@
+@import "variable";
+@import "article";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include important-text;
+    @include important-font;
+
+    background: {
+        color: $bg-color;
+    }
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    article {
+        @include article-style;
+        border-radius: 50px;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            @include article-after-before(50px, 50px, -1);
+        }
+
+        &::before {
+            @include article-after-before(-50px, -50px, -1);
+        }
+
+        &:hover::after {
+            transition: all 0.5s;
+            transform: scale(0.5);
+            @include article-selector-position(250px, 250px);
+            border-radius: 50%;
+        }
+
+        &:hover::before {
+            transition: transform 0.5s;
+            transform: scale(0.6);
+            @include article-selector-position(-250px, -250px);
+            border-radius: 50%;
+        }
+
+        h3 {
+            color: #6c5ce7;
+        }
+
+        img {
+            width: 80%;
+            border-radius: 50px;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+            box-shadow: 20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+        }
+
+        marquee {
+            color: green;
+            font-size: 15px;
+            margin-top: 30px;
+        }
+    }
+
+    .img-form {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .img-form {
+        @include bg-shadow;
+        border-radius: 30px;
+        #input-file {
+            width: 106px;
+        }
+    }
+}
