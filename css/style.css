@@ -37,7 +37,7 @@ body article::after {
   background: linear-gradient(145deg, #cacaca6e, #f0f0f0);
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffffb2;
   top: 50px;
-  left: 50px;
+  left: 100px;
   transition: all 0.5s;
   z-index: -1;
   background: linear-gradient(145deg, #cacaca6e, #f0f0f0);
