@@ -30,7 +30,7 @@ body {
         cursor: pointer;
 
         &::after {
-            @include article-after-before(50px, 50px, -1);
+            @include article-after-before(50px, 100px, -1);
         }
 
         &::before {
